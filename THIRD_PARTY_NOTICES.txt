@@ -1,0 +1,77 @@
+# AstroPerita Third-Party Notices
+
+AstroPerita includes third-party software, libraries, and data sources that are
+relevant to the installed release. This document provides the additional
+release-specific notices and attributions maintained by AstroPerita.
+
+Complete Flutter and Dart package license texts are also available inside the
+application through the Flutter and package license view. Original third-party
+license texts are kept in their original language and are not translated or
+rewritten here.
+
+## Swiss Ephemeris
+
+AstroPerita uses and distributes Swiss Ephemeris under a Professional License
+for astronomical and astrological ephemeris calculations. Distributed
+AstroPerita builds include a compiled Swiss Ephemeris integration and the Swiss
+Ephemeris data files required by AstroPerita's calculation features.
+
+The bundled Swiss Ephemeris data basis includes ephemeris data files and
+supporting fixed-star, orbital-elements, leap-second, asteroid, and auxiliary
+data files as required by the installed release. These files are treated as
+part of the Swiss Ephemeris component. AstroPerita does not distribute Swiss
+Ephemeris source code as part of the application.
+
+Original notices and copyright information contained in the third-party
+library, binary components, and ephemeris data files are retained.
+
+## Noto Sans Report Fonts
+
+AstroPerita embeds the unmodified Noto Sans Regular and Noto Sans Bold fonts
+for locally generated PDF reports. The fonts originate from the official
+`notofonts/latin-greek-cyrillic` release `NotoSans-v2.015`.
+
+Copyright 2022 The Noto Project Authors
+(https://github.com/notofonts/latin-greek-cyrillic)
+
+Noto Sans is licensed under the SIL Open Font License, Version 1.1. The
+original license text is included with the bundled font assets as
+`assets/fonts/noto/OFL.txt`.
+
+## PDF Manual Rendering
+
+AstroPerita uses `pdfrx` to render the bundled local PDF manuals in the Help
+workspace. Native PDF rendering is provided through PDFium.
+
+The related Dart and Flutter packages are covered by the application's Flutter
+and package license view. AstroPerita also includes the complete original
+PDFium license collections for the PDFium binaries used by the installed
+release.
+
+## Natural Earth Map Data
+
+AstroPerita uses map data based on Natural Earth Vector for the world map
+background shown in the application.
+
+The bundled Natural Earth-derived map asset records its source as Natural
+Earth Vector and its source license as public domain.
+
+## Location And Time-Zone Data
+
+AstroPerita uses third-party local data and packages for place lookup,
+coordinate-to-time-zone mapping, and historical time-zone resolution.
+
+The `country_state_city` package supplies offline country, region, city,
+latitude, and longitude lookup data. The `lat_lng_to_timezone` package maps
+coordinates to IANA time-zone identifiers. The `timezone` package supplies the
+runtime time-zone database used for local-time and DST resolution, based on the
+IANA Time Zone Database.
+
+The package license texts for these dependencies are available through the
+Flutter and package license view inside AstroPerita.
+
+## Flutter And Dart Package Licenses
+
+AstroPerita is built with Flutter and Dart and uses additional Flutter and Dart
+packages. Their package license texts are available inside the application
+through the Flutter and package license view.
