@@ -146,6 +146,12 @@ cp "${DOWNLOADS}/${MAC_DMG}" \
 cp "${DOWNLOADS}/${WIN_EXE}" \
   "${TMP}/AstroPerita-Windows-x64.exe"
 
+cp OPEN_SOURCE_LICENSES.txt \
+  "${TMP}/AstroPerita-Open-Source-Lizenzen.txt"
+
+cp THIRD_PARTY_NOTICES.txt \
+  "${TMP}/AstroPerita-Third-Party-Notices.txt"
+
 NOTES="${TMP}/release-notes.md"
 
 if [[ "$VERSION" == "1.0.0" ]]; then
@@ -187,9 +193,11 @@ ASSETS=(
   "${TMP}/${WIN_SHA}"
   "${TMP}/AstroPerita-macOS.dmg"
   "${TMP}/AstroPerita-Windows-x64.exe"
+  "${TMP}/AstroPerita-Open-Source-Lizenzen.txt"
+  "${TMP}/AstroPerita-Third-Party-Notices.txt"
 )
 
-printf '\nReady to publish %s with exactly 9 assets from ~/Downloads.\n' "$TAG"
+printf '\nReady to publish %s with exactly 11 assets from ~/Downloads.\n' "$TAG"
 printf 'Type exactly "release %s" to continue: ' "$TAG"
 
 read -r CONFIRM
@@ -210,9 +218,11 @@ COUNT="$(
     --jq '.assets | length'
 )"
 
-[[ "$COUNT" == "9" ]] || \
-  fail "Release exists, but asset count is ${COUNT}, expected 9."
+[[ "$COUNT" == "11" ]] || \
+  fail "Release exists, but asset count is ${COUNT}, expected 11."
 
-printf '\nSUCCESS: %s published with 9 assets.\n' "$TAG"
-printf 'macOS:  https://github.com/%s/releases/latest/download/AstroPerita-macOS.dmg\n' "$REPO"
-printf 'Windows: https://github.com/%s/releases/latest/download/AstroPerita-Windows-x64.exe\n' "$REPO"
+printf '\nSUCCESS: %s published with 11 assets.\n' "$TAG"
+printf 'macOS:       https://github.com/%s/releases/latest/download/AstroPerita-macOS.dmg\n' "$REPO"
+printf 'Windows:     https://github.com/%s/releases/latest/download/AstroPerita-Windows-x64.exe\n' "$REPO"
+printf 'Open source: https://github.com/%s/releases/latest/download/AstroPerita-Open-Source-Lizenzen.txt\n' "$REPO"
+printf 'Notices:     https://github.com/%s/releases/latest/download/AstroPerita-Third-Party-Notices.txt\n' "$REPO"
